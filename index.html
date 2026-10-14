@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gary Pham — Portfolio</title>
+  <meta name="description" content="Vu Hoang (Gary) Pham — Computer Engineering at Drexel University. FPGA, quantum computing, ML/AI, and embedded systems." />
+  <meta name="author" content="Vu Hoang (Gary) Pham" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Gary Pham — Portfolio" />
+  <meta property="og:description" content="Computer Engineering at Drexel. FPGA, quantum computing, ML/AI, and embedded systems." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://kagamirudo.github.io/" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐉</text></svg>" />
+</head>
+<body>
+  <header class="nav">
+    <a href="#top" class="nav__brand">GP</a>
+    <nav class="nav__links">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle color theme">◐</button>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero__inner">
+        <p class="hero__eyebrow">Computer Engineering · Drexel University</p>
+        <h1 class="hero__title">Vu Hoang <span>(Gary)</span> Pham</h1>
+        <p class="hero__lede">
+          I build at the boundary of hardware and software — from
+          <strong>FPGA accelerators</strong> and <strong>embedded systems</strong>
+          to <strong>quantum computing research</strong> and <strong>machine learning</strong>.
+        </p>
+        <div class="hero__cta">
+          <a class="btn btn--primary" href="#projects">View Projects</a>
+          <a class="btn btn--ghost" href="https://github.com/kagamirudo" target="_blank" rel="noopener">GitHub ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <h2 class="section__title"><span class="section__num">01</span> About</h2>
+      <div class="about">
+        <p>
+          I'm a Computer Engineering student in Drexel University's College of Engineering.
+          My work lives where silicon meets code: optimizing computation on reconfigurable
+          hardware, driving sensors and microcontrollers close to the metal, and exploring
+          what quantum and ML can do for hard problems.
+        </p>
+        <p>
+          Recent work includes research on optimized computing for FPGAs (comparing RTL
+          against HLS), a senior-year quantum computing project, applied ML/AI coursework,
+          and a collection of embedded drivers for ESP32 and Raspberry Pi platforms.
+        </p>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <h2 class="section__title"><span class="section__num">02</span> Projects</h2>
+      <div class="grid" id="projectGrid">
+        <!-- cards injected by script.js -->
+      </div>
+      <p class="grid__more">
+        <a href="https://github.com/kagamirudo?tab=repositories" target="_blank" rel="noopener">
+          See all repositories on GitHub ↗
+        </a>
+      </p>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section">
+      <h2 class="section__title"><span class="section__num">03</span> Skills &amp; Tools</h2>
+      <div class="skills">
+        <div class="skills__group">
+          <h3>Hardware / HDL</h3>
+          <ul>
+            <li>VHDL</li><li>SystemVerilog</li><li>FPGA Design</li>
+            <li>HLS</li><li>Digital Systems</li>
+          </ul>
+        </div>
+        <div class="skills__group">
+          <h3>Embedded</h3>
+          <ul>
+            <li>C / C++</li><li>ESP-IDF (ESP32)</li><li>Raspberry Pi</li>
+            <li>Sensor Drivers</li><li>UART / I²C</li>
+          </ul>
+        </div>
+        <div class="skills__group">
+          <h3>ML / AI &amp; Research</h3>
+          <ul>
+            <li>Python</li><li>Jupyter</li><li>Machine Learning</li>
+            <li>Quantum Computing</li>
+          </ul>
+        </div>
+        <div class="skills__group">
+          <h3>Systems &amp; Web</h3>
+          <ul>
+            <li>Kubernetes</li><li>Assembly / Hack</li><li>Git</li>
+            <li>HTML / CSS</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section section--contact">
+      <h2 class="section__title"><span class="section__num">04</span> Contact</h2>
+      <p class="contact__lede">
+        Open to research collaborations, internships, and interesting hardware/software problems.
+      </p>
+      <div class="contact__links">
+        <a class="btn btn--primary" href="mailto:your-email@example.com">Email me</a>
+        <a class="btn btn--ghost" href="https://github.com/kagamirudo" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn btn--ghost" href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Vu Hoang (Gary) Pham · Built with plain HTML/CSS · Hosted on GitHub Pages</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
