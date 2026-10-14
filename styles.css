@@ -31,7 +31,11 @@
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; scroll-padding-top: 70px; }
+html { scroll-behavior: smooth; scroll-padding-top: 70px; overflow-x: hidden; }
+
+/* Prevent any long string (math formulas, emails, URLs) from forcing
+   the page wider than the viewport on small screens. */
+p, li, h1, h2, h3, h4, .pub__title, .research__points li { overflow-wrap: break-word; word-break: break-word; }
 
 body {
   background: var(--bg);
