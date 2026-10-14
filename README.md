@@ -1,37 +1,50 @@
 # kagamirudo.github.io
 
-Personal portfolio for **Vu Hoang (Gary) Pham** — Computer Engineering @ Drexel University.
+Research-forward portfolio for **Vu Hoang (Gary) Pham** — M.S. Computer Engineering
+@ Drexel University, PhD applicant.
 
 Live site: https://kagamirudo.github.io/
+
+Weighted roughly **70% research / 30% engineering** — research is the primary
+track, with industry experience as the backup.
 
 ## Stack
 
 Plain, dependency-free **HTML + CSS + JavaScript**. No build step — GitHub Pages
-serves the files directly.
+serves the files directly. Fully responsive (mobile nav, single-column reflow).
 
 ```
-index.html    # markup / content
-styles.css    # theme + layout (light/dark)
-script.js     # project cards, theme toggle, scroll reveal
-.nojekyll     # tell GitHub Pages to skip Jekyll processing
+index.html         # section markup
+styles.css         # research-journal theme (light/dark) + responsive layout
+script.js          # all content lives in the DATA arrays at the top
+assets/papers/     # publication PDFs
+.nojekyll          # skip Jekyll processing
 ```
 
-## Editing
+## Editing content
 
-- **Projects** — edit the `PROJECTS` array in `script.js`.
-- **About / skills / contact** — edit the matching sections in `index.html`.
-- **Colors / fonts** — edit the CSS custom properties at the top of `styles.css`.
+Everything is data-driven. Open `script.js` and edit the arrays at the top:
 
-Update the `mailto:` and LinkedIn links in the Contact section of `index.html`.
+- `RESEARCH` — research threads (FPGA, quantum, combinatorics).
+- `COLLABORATORS` — advisors / collaborators. **Replace the placeholder names.**
+- `PUBLICATIONS` — papers and project writeups (PDFs live in `assets/papers/`).
+- `EXPERIENCE` — work timeline. **Fill in the Credit Genie placeholder.**
+
+### Placeholders to replace
+- Advisor names in `COLLABORATORS` (shown in amber/dashed until filled).
+- The **Credit Genie** experience entry (dashed card) — add real bullets + stack.
+
+## Adding a paper
+
+1. Drop the PDF in `assets/papers/`.
+2. Add an entry to the `PUBLICATIONS` array with `href: "assets/papers/your.pdf"`.
 
 ## Local preview
 
 ```bash
-python3 -m http.server 8000
-# then open http://localhost:8000
+python3 -m http.server 8000   # then open http://localhost:8000
 ```
 
 ## Deploy
 
-Pushing to the default branch publishes automatically once GitHub Pages is
-enabled (Settings → Pages → Source: `main` / root).
+Push to `main`; GitHub Pages redeploys automatically.

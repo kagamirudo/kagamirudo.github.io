@@ -3,49 +3,58 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gary Pham — Portfolio</title>
-  <meta name="description" content="Vu Hoang (Gary) Pham — Computer Engineering at Drexel University. FPGA, quantum computing, ML/AI, and embedded systems." />
+  <title>Gary Pham — Research Portfolio</title>
+  <meta name="description" content="Vu Hoang (Gary) Pham — M.S. Computer Engineering at Drexel University. Research in hardware acceleration (FPGA/HLS), quantum algorithms, and combinatorics. PhD applicant." />
   <meta name="author" content="Vu Hoang (Gary) Pham" />
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Gary Pham — Portfolio" />
-  <meta property="og:description" content="Computer Engineering at Drexel. FPGA, quantum computing, ML/AI, and embedded systems." />
+  <meta property="og:title" content="Gary Pham — Research Portfolio" />
+  <meta property="og:description" content="M.S. Computer Engineering @ Drexel. Research in FPGA acceleration, quantum algorithms, and combinatorics. PhD applicant." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://kagamirudo.github.io/" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Lora:ital,wght@0,500;0,600;1,500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐉</text></svg>" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧩</text></svg>" />
 </head>
 <body>
   <header class="nav">
     <a href="#top" class="nav__brand">GP</a>
-    <nav class="nav__links">
+    <button class="nav__burger" id="navBurger" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <nav class="nav__links" id="navLinks">
       <a href="#about">About</a>
-      <a href="#projects">Projects</a>
+      <a href="#research">Research</a>
+      <a href="#publications">Publications</a>
+      <a href="#experience">Experience</a>
       <a href="#skills">Skills</a>
       <a href="#contact">Contact</a>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle color theme">◐</button>
     </nav>
-    <button class="theme-toggle" id="themeToggle" aria-label="Toggle color theme">◐</button>
   </header>
 
   <main id="top">
     <!-- HERO -->
     <section class="hero">
       <div class="hero__inner">
-        <p class="hero__eyebrow">Computer Engineering · Drexel University</p>
+        <p class="hero__eyebrow">M.S. Computer Engineering · Drexel University · PhD Applicant</p>
         <h1 class="hero__title">Vu Hoang <span>(Gary)</span> Pham</h1>
         <p class="hero__lede">
-          I build at the boundary of hardware and software — from
-          <strong>FPGA accelerators</strong> and <strong>embedded systems</strong>
-          to <strong>quantum computing research</strong> and <strong>machine learning</strong>.
+          Computer-systems researcher working across <strong>hardware acceleration</strong>,
+          <strong>quantum algorithms</strong>, and <strong>combinatorics</strong>. I like problems
+          that live between theory and the metal — compiling nested loops into FPGA systolic
+          arrays, proving structure in puzzle colorings, and amplitude-amplifying classical search.
         </p>
         <div class="hero__cta">
-          <a class="btn btn--primary" href="#projects">View Projects</a>
+          <a class="btn btn--primary" href="#research">Explore Research</a>
+          <a class="btn btn--ghost" href="#publications">Read Papers</a>
           <a class="btn btn--ghost" href="https://github.com/kagamirudo" target="_blank" rel="noopener">GitHub ↗</a>
         </div>
+        <ul class="hero__facts">
+          <li><strong>GPA 3.85</strong><span>Dean's List · Pennoni Honors</span></li>
+          <li><strong>3 papers</strong><span>combinatorics (preprints)</span></li>
+          <li><strong>2.3× / √N</strong><span>FPGA speedup · quantum speedup</span></li>
+        </ul>
       </div>
     </section>
 
@@ -54,62 +63,115 @@
       <h2 class="section__title"><span class="section__num">01</span> About</h2>
       <div class="about">
         <p>
-          I'm a Computer Engineering student in Drexel University's College of Engineering.
-          My work lives where silicon meets code: optimizing computation on reconfigurable
-          hardware, driving sensors and microcontrollers close to the metal, and exploring
-          what quantum and ML can do for hard problems.
+          I'm a Master's student in Computer Engineering at Drexel University's College of
+          Engineering (Pennoni Honors College), concentrating in <em>computer systems &amp;
+          architecture</em> and <em>algorithms &amp; data structures</em>. I completed my B.S. in
+          Computer Science at Drexel in 2025 with minors in Computer Engineering and Mathematics.
         </p>
         <p>
-          Recent work includes research on optimized computing for FPGAs (comparing RTL
-          against HLS), a senior-year quantum computing project, applied ML/AI coursework,
-          and a collection of embedded drivers for ESP32 and Raspberry Pi platforms.
+          My research sits where silicon meets theory. Right now I'm building a
+          <strong>compiler for FPGA nested-loop acceleration</strong> — turning dense linear-algebra
+          kernels into high-utilization systolic arrays. Earlier I designed a
+          <strong>quantum algorithm for lexicographically-minimum string rotation</strong> and ran it
+          on IBM Quantum hardware, and most recently I've been writing a short series of
+          <strong>combinatorics notes</strong> on adjacency-free colorings of the Rubik's cube.
+        </p>
+        <p>
+          I'm applying to PhD programs to keep working at this intersection. Alongside research I
+          build production embedded systems — edge CV, DAQ pipelines, and firmware — which keeps my
+          theory grounded in real hardware constraints.
         </p>
       </div>
     </section>
 
-    <!-- PROJECTS -->
-    <section id="projects" class="section">
-      <h2 class="section__title"><span class="section__num">02</span> Projects</h2>
-      <div class="grid" id="projectGrid">
-        <!-- cards injected by script.js -->
-      </div>
-      <p class="grid__more">
-        <a href="https://github.com/kagamirudo?tab=repositories" target="_blank" rel="noopener">
-          See all repositories on GitHub ↗
-        </a>
+    <!-- RESEARCH -->
+    <section id="research" class="section">
+      <h2 class="section__title"><span class="section__num">02</span> Research</h2>
+      <p class="section__intro">
+        Three threads: hardware acceleration, quantum algorithms, and combinatorics. Each is backed
+        by code, hardware runs, or written proofs.
       </p>
+      <div class="research" id="researchList">
+        <!-- injected by script.js -->
+      </div>
+
+      <h3 class="subhead">Research collaborators &amp; advisors</h3>
+      <p class="section__intro section__intro--tight">
+        People I've worked with on the research above.
+      </p>
+      <div class="collab" id="collabList">
+        <!-- injected by script.js -->
+      </div>
+    </section>
+
+    <!-- PUBLICATIONS -->
+    <section id="publications" class="section">
+      <h2 class="section__title"><span class="section__num">03</span> Publications &amp; Writing</h2>
+      <p class="section__intro">
+        Click any entry to read the PDF or visit the project. Combinatorics notes are self-authored
+        preprints; research projects link to their code and reports.
+      </p>
+      <ol class="pubs" id="pubsList">
+        <!-- injected by script.js -->
+      </ol>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section">
+      <h2 class="section__title"><span class="section__num">04</span> Experience</h2>
+      <p class="section__intro">
+        Engineering roles that fund and ground the research — mostly embedded systems, edge AI, and
+        applied ML. Research remains the primary track; this is the backup if a PhD doesn't land.
+      </p>
+      <div class="timeline" id="experienceList">
+        <!-- injected by script.js -->
+      </div>
     </section>
 
     <!-- SKILLS -->
     <section id="skills" class="section">
-      <h2 class="section__title"><span class="section__num">03</span> Skills &amp; Tools</h2>
+      <h2 class="section__title"><span class="section__num">05</span> Skills &amp; Tools</h2>
       <div class="skills">
+        <div class="skills__group">
+          <h3>Research / Theory</h3>
+          <ul>
+            <li>Quantum (Qiskit)</li><li>Combinatorics</li><li>Algorithms</li>
+            <li>HLS / RTL co-design</li><li>Numerical Linear Algebra</li>
+          </ul>
+        </div>
         <div class="skills__group">
           <h3>Hardware / HDL</h3>
           <ul>
-            <li>VHDL</li><li>SystemVerilog</li><li>FPGA Design</li>
-            <li>HLS</li><li>Digital Systems</li>
+            <li>VHDL</li><li>SystemVerilog</li><li>Vitis HLS</li>
+            <li>AXI-Stream</li><li>Xilinx Zynq / Zybo</li><li>CUDA</li>
           </ul>
         </div>
         <div class="skills__group">
           <h3>Embedded</h3>
           <ul>
-            <li>C / C++</li><li>ESP-IDF (ESP32)</li><li>Raspberry Pi</li>
-            <li>Sensor Drivers</li><li>UART / I²C</li>
+            <li>C / C++</li><li>ESP-IDF (ESP32-S3)</li><li>FreeRTOS</li>
+            <li>STM32</li><li>Raspberry Pi</li><li>RKNN / ESP-DL</li>
           </ul>
         </div>
         <div class="skills__group">
-          <h3>ML / AI &amp; Research</h3>
+          <h3>ML / AI</h3>
           <ul>
-            <li>Python</li><li>Jupyter</li><li>Machine Learning</li>
-            <li>Quantum Computing</li>
+            <li>Python</li><li>PyTorch</li><li>ONNX / TensorRT</li>
+            <li>YOLO · ByteTrack</li><li>INT8 Quantization</li>
           </ul>
         </div>
         <div class="skills__group">
-          <h3>Systems &amp; Web</h3>
+          <h3>Languages</h3>
           <ul>
-            <li>Kubernetes</li><li>Assembly / Hack</li><li>Git</li>
-            <li>HTML / CSS</li>
+            <li>C/C++</li><li>Python</li><li>Rust</li><li>Go</li>
+            <li>Java</li><li>Haskell</li><li>Racket</li><li>x86 Asm</li>
+          </ul>
+        </div>
+        <div class="skills__group">
+          <h3>Systems &amp; Tools</h3>
+          <ul>
+            <li>Linux</li><li>Docker</li><li>Kubernetes</li><li>AWS</li>
+            <li>Git</li><li>CMake</li><li>MQTT</li>
           </ul>
         </div>
       </div>
@@ -117,20 +179,21 @@
 
     <!-- CONTACT -->
     <section id="contact" class="section section--contact">
-      <h2 class="section__title"><span class="section__num">04</span> Contact</h2>
+      <h2 class="section__title"><span class="section__num">06</span> Contact</h2>
       <p class="contact__lede">
-        Open to research collaborations, internships, and interesting hardware/software problems.
+        Open to PhD opportunities, research collaborations, and hard hardware/software problems.
       </p>
       <div class="contact__links">
-        <a class="btn btn--primary" href="mailto:hoangvuph03@gmail.com">Email me</a>
+        <a class="btn btn--primary" href="mailto:hoangvuph03@gmail.com">hoangvuph03@gmail.com</a>
         <a class="btn btn--ghost" href="https://github.com/kagamirudo" target="_blank" rel="noopener">GitHub</a>
         <a class="btn btn--ghost" href="https://www.linkedin.com/in/gary-pham/" target="_blank" rel="noopener">LinkedIn</a>
       </div>
+      <p class="contact__loc">Philadelphia, PA · 267-455-3394</p>
     </section>
   </main>
 
   <footer class="footer">
-    <p>© <span id="year"></span> Vu Hoang (Gary) Pham · Built with plain HTML/CSS · Hosted on GitHub Pages</p>
+    <p>© <span id="year"></span> Vu Hoang (Gary) Pham · Built with plain HTML/CSS/JS · Hosted on GitHub Pages</p>
   </footer>
 
   <script src="script.js"></script>
