@@ -25,11 +25,11 @@ const RESEARCH = [
     venue: "Drexel Senior Project (CI 491–493) · Sep 2024 – Jun 2025",
     advisor: "ADVISOR_QUANTUM",
     points: [
-      "Architected a quantum LMSR algorithm in <strong>Qiskit using Grover's amplification</strong>, reducing search complexity from O(N log N) to <strong>O(√N)</strong> (~320 fewer oracle calls).",
-      "Deployed a 6-qubit LMSR circuit on <strong>IBM Quantum hardware</strong>: 100 runs across 20 instances at <strong>≥97% success rate</strong>, validated against classical benchmarks.",
-      "Applied it to benzenoid edge-code recognition over 50 molecular graphs for Drexel's Week of Excellence, cutting end-to-end time by 30%.",
+      "Co-authored a quantum LMSR algorithm (with Prof. Boady) combining <strong>Grover search with QRAM</strong>, improving the worst case from the classical <strong>O(N)</strong> to <strong>O(√N log N)</strong>.",
+      "Implemented and deployed a 6-qubit LMSR circuit in Qiskit on <strong>IBM Quantum hardware</strong>: 100 runs across 20 instances at <strong>≥97% success rate</strong>, validated against classical benchmarks.",
+      "Applied it to canonical <strong>benzenoid identification</strong> over molecular graphs for Drexel's Week of Excellence — a cheminformatics use case for repeated pattern search.",
     ],
-    tags: ["Qiskit", "Grover's Algorithm", "IBM Quantum", "Benzenoids"],
+    tags: ["Qiskit", "Grover + QRAM", "IBM Quantum", "Benzenoids"],
     links: [{ label: "Code & Notebooks", href: "https://github.com/kagamirudo/Quantum-Research-2024" }],
   },
   {
@@ -113,12 +113,22 @@ const PUBLICATIONS = [
     cta: "PDF",
   },
   {
+    type: "Preprint",
+    title: "Quantum Lexicographically Minimal String Rotation and Benzenoid Identification via QRAM-Accelerated Search",
+    authors: "M. Boady, V. H. Pham",
+    year: "2025",
+    summary:
+      "A quantum algorithm for lexicographically-minimal string rotation combining Grover search over all rotations with QRAM, reaching a worst-case O(√N log N) versus the classical O(N) bound, with an application to canonical benzenoid identification in cheminformatics.",
+    href: "assets/papers/quantum_lmsr.pdf",
+    cta: "PDF",
+  },
+  {
     type: "Project",
-    title: "Quantum LMSR via Grover Amplification (Senior Project)",
+    title: "Quantum LMSR — Qiskit implementation & senior-project code",
     authors: "V. H. Pham · Drexel CCI",
     year: "2024–25",
     summary:
-      "Senior-project report and Qiskit implementation of an O(√N) lexicographically-minimum string rotation algorithm, run on IBM Quantum hardware and applied to benzenoid graph recognition.",
+      "Qiskit circuits, IBM Quantum runs, and notebooks behind the LMSR paper, including the 6-qubit deployment and benzenoid graph experiments.",
     href: "https://github.com/kagamirudo/Quantum-Research-2024",
     cta: "Repo ↗",
   },
