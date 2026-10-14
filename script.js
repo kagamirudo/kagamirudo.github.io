@@ -7,15 +7,15 @@ const RESEARCH = [
   {
     icon: "⚙️",
     area: "Hardware Acceleration",
-    title: "FPGA Compiler for Nested-Loop Acceleration",
-    venue: "Drexel M.S. Research · Jun 2025 – Present",
-    advisor: "ADVISOR_FPGA", // placeholder — see COLLABORATORS
+    title: "A Compiler for Nearest-Neighbor Systolic Arrays on FPGA",
+    venue: "Drexel M.S. Thesis · Jun 2025 – Present",
+    advisor: "ADVISOR_FPGA",
     points: [
-      "Designing LU-decomposition and matrix-factorization systolic arrays on Xilinx FPGA (Zybo Z) with Vitis HLS and AXI-Stream IP — <strong>2.3× speedup</strong> over a baseline C implementation.",
-      "Compiling nested-loop kernels into 64-PE arrays with <strong>&gt;90% pipeline utilization</strong>, verified by cycle-accurate simulation.",
-      "Tuning DMA throughput by 35% via bus-width and latency optimization; cross-checking synthesis against C/C++ and VHDL testbenches.",
+      "Building a compiler + hardware-template flow that emits systolic PE meshes with <strong>strict nearest-neighbor connectivity</strong> and AXI4-Stream–compliant boundaries by construction, driven from one shared PE template.",
+      "Two case studies from the same template — <strong>LU decomposition</strong> and <strong>one-sided Jacobi SVD</strong> — benchmarked head-to-head against Vitis HLS on identical C source; emitted arrays reach <strong>&gt;90% pipeline utilization</strong>.",
+      "A block-parallel (BLV) schedule delivers up to <strong>7.7× speedup</strong> over the serial core (N=8: 3.85×), verified end-to-end against NumPy golden references in cycle-accurate simulation.",
     ],
-    tags: ["Vitis HLS", "VHDL", "Systolic Arrays", "AXI-Stream"],
+    tags: ["Vitis HLS", "VHDL", "Systolic Arrays", "AXI4-Stream", "Xilinx Zynq"],
     links: [{ label: "Code (FPGA)", href: "https://github.com/kagamirudo/FPGA" }],
   },
   {
@@ -23,7 +23,7 @@ const RESEARCH = [
     area: "Quantum Algorithms",
     title: "Quantum Lexicographically-Minimum String Rotation (LMSR)",
     venue: "Drexel Senior Project (CI 491–493) · Sep 2024 – Jun 2025",
-    advisor: "ADVISOR_QUANTUM", // placeholder — see COLLABORATORS
+    advisor: "ADVISOR_QUANTUM",
     points: [
       "Architected a quantum LMSR algorithm in <strong>Qiskit using Grover's amplification</strong>, reducing search complexity from O(N log N) to <strong>O(√N)</strong> (~320 fewer oracle calls).",
       "Deployed a 6-qubit LMSR circuit on <strong>IBM Quantum hardware</strong>: 100 runs across 20 instances at <strong>≥97% success rate</strong>, validated against classical benchmarks.",
@@ -49,25 +49,33 @@ const RESEARCH = [
 ];
 
 // ---- Collaborators & advisors ----
-// NOTE: names below are PLACEHOLDERS. Replace the `name`/`role` fields with the
-// real advisors you worked with. Set `profile` to their faculty page (or null).
+// Prof. Kandasamy's `note` still needs one line (card renders dashed until then).
 const COLLABORATORS = [
   {
     key: "ADVISOR_FPGA",
-    name: "[FPGA research advisor]",
-    role: "Faculty advisor — FPGA / Computer Architecture",
-    org: "Drexel University, College of Engineering (ECE)",
-    note: "Master's research on nested-loop acceleration & HLS.",
-    profile: null,
-    placeholder: true,
+    name: "Prof. Prawat Nagvajara",
+    role: "M.S. thesis advisor — FPGA / Computer Architecture",
+    org: "Drexel University, Dept. of Electrical & Computer Engineering",
+    note: "Advises my thesis on compiler-emitted nearest-neighbor systolic arrays for LU decomposition and Jacobi SVD.",
+    profile: "https://drexel.edu/engineering/about/faculty-staff/N/nagvajara-prawat/",
+    placeholder: false,
   },
   {
     key: "ADVISOR_QUANTUM",
-    name: "[Senior project advisor]",
-    role: "Faculty advisor — Quantum / CCI Senior Project",
+    name: "Prof. Mark Boady",
+    role: "Senior-project advisor — Quantum Algorithms",
     org: "Drexel University, College of Computing & Informatics",
-    note: "Supervised the quantum LMSR senior project (CI 491–493).",
-    profile: null,
+    note: "Supervised the quantum LMSR senior project (CI 491–493) and its benzenoid graph application.",
+    profile: "https://drexel.edu/cci/about/directory/B/Boady-Mark/",
+    placeholder: false,
+  },
+  {
+    key: "ADVISOR_KANDASAMY",
+    name: "Prof. Nagarajan Kandasamy",
+    role: "Faculty collaborator — Embedded & Reconfigurable Systems",
+    org: "Drexel University, Dept. of Electrical & Computer Engineering",
+    note: "[Add one line on what you worked on with Prof. Kandasamy.]",
+    profile: "https://drexel.edu/engineering/about/faculty-staff/K/kandasamy-nagarajan/",
     placeholder: true,
   },
 ];
@@ -119,10 +127,23 @@ const PUBLICATIONS = [
 // ---- Experience (backup track, ~30%) ----
 const EXPERIENCE = [
   {
+    role: "Software Engineer — Payments Engineering",
+    org: "Credit Genie",
+    loc: "Remote, US",
+    date: "Sep 2026 – Present",
+    points: [
+      "Backend engineer on the Payments team of a membership-based personal-finance platform (interest-free cash advances, spending tools, and credit-building products).",
+      "Build and harden the money-movement stack: bank-linking (Plaid) item-health tracking, transfer/settlement status mapping, and reliable handling of failures, reversals, and chargebacks.",
+      "Own scheduled payment infrastructure — daily collection scheduling, cleanup jobs for stale attempts, and timezone-correct cron orchestration — to keep automated debits accurate and dependable.",
+    ],
+    tags: ["Node.js", "Backend", "Plaid", "Payments", "Cron"],
+    repos: [{ label: "Private (company)", private: true }],
+  },
+  {
     role: "Embedded Software Engineer (Internship)",
     org: "ImesPro — Edge AI & Factory Automation",
     loc: "Ho Chi Minh, Vietnam",
-    date: "Jun 2026 – Present",
+    date: "Jun 2026 – Sep 2026",
     points: [
       "ESP32-S3-CAM factory-automation firmware in C/ESP-IDF with ThingsBoard MQTT (telemetry, RPC, OTA) and multi-task FreeRTOS; double-buffered frame upload to an OCR backend for on-line visual inspection.",
       "Edge CV on ESP32-S3-CAM (ESP-DL) and Luckfox Pico Pro (RKNN): PyTorch digit CNN quantized INT8, on-device OCR ~10 FPS; YOLO11n on RV1106 NPU ~8–12 FPS; QR + face firmware with dual-core FreeRTOS ≥15 FPS.",
@@ -143,18 +164,6 @@ const EXPERIENCE = [
     ],
     tags: ["ESP32-S3", "DAQ", "FreeRTOS", "C"],
     repos: [{ label: "Laser-Material-Lab", href: "https://github.com/kagamirudo/Laser-Material-Lab" }],
-  },
-  {
-    role: "Software Engineer",
-    org: "Credit Genie",
-    loc: "Remote / NJ",
-    date: "Current",
-    points: [
-      "PLACEHOLDER — add 2–3 bullets on your Credit Genie work (what you build, the stack, and impact). Tell me and I'll fill this in.",
-    ],
-    tags: ["PLACEHOLDER"],
-    repos: [],
-    placeholder: true,
   },
   {
     role: "Embedded Software Engineer (CO-OP)",
