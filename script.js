@@ -86,7 +86,7 @@ const PUBLICATIONS = [
     type: "Preprint",
     title: "On Monochromatic Orthogonal Adjacencies in the Faces of an n×n×n Cube",
     authors: "V. H. Pham",
-    year: "2025",
+    year: "2026",
     summary:
       "Disproves the claim that every six-color, n²-per-color stickering must contain two orthogonally adjacent same-color facelets: a checkerboard (parity) coloring achieves zero, because each face's grid graph is bipartite.",
     href: "assets/papers/cube_coloring.pdf",
@@ -96,7 +96,7 @@ const PUBLICATIONS = [
     type: "Preprint",
     title: "On the Non-Uniqueness of Adjacency-Free Colorings of the n×n×n Cube",
     authors: "V. H. Pham",
-    year: "2025",
+    year: "2026",
     summary:
       "Shows adjacency-free colorings are far from unique — in two senses: distinct symmetry-group orbits (distinguished by the color co-occurrence graph), and a super-exponential lower bound N(n) ≥ ((3n²)!/(n²!)³)² on their count.",
     href: "assets/papers/cube_uniqueness.pdf",
@@ -106,7 +106,7 @@ const PUBLICATIONS = [
     type: "Preprint",
     title: "Adjacency-Free Patterns on a Physical 3×3×3 Cube: A Reachability Model",
     authors: "V. H. Pham",
-    year: "2025",
+    year: "2026",
     summary:
       "Re-examines the question under physical reachability (fixed centers, glued cubies), verified by exhaustive/exact search against a from-scratch simulator. The half-turn pattern is unique (Pons Asinorum); the full group adds the superflip. Includes an erratum to the counting note.",
     href: "assets/papers/cube_reachable.pdf",
@@ -116,7 +116,7 @@ const PUBLICATIONS = [
     type: "Preprint",
     title: "Expected Fewest Moves to Solve a Scrambled Cube",
     authors: "V. H. Pham",
-    year: "2025",
+    year: "2026",
     summary:
       "An information-theoretic floor for the WCA Fewest Moves Challenge: using the exact God's-number distance distribution, the expected optimal 3×3×3 solution is ≈17.70 HTM moves (>99.9% of states at distance 17–18), and for the n×n×n cube the expected optimal length is Θ(n²/log n).",
     href: "assets/papers/cube_fmc.pdf",
@@ -126,7 +126,7 @@ const PUBLICATIONS = [
     type: "Preprint",
     title: "Why Fewest-Moves Methods Work: Subgroup Reduction as a Factorization of |G|",
     authors: "V. H. Pham",
-    year: "2025",
+    year: "2026",
     summary:
       "Proves why competitive cube solvers reduce through nested subgroups rather than searching all 4.3×10¹⁹ states: by Lagrange's theorem a method is a factorization of |G| into stage indices, and since Σ log[Gᵢ:Gᵢ₊₁] = log|G| is fixed, staging trades one intractable search for several tractable ones. Worked through Thistlethwaite's and Kociemba's chains.",
     href: "assets/papers/cube_fmc_methods.pdf",
