@@ -114,6 +114,26 @@ const PUBLICATIONS = [
   },
   {
     type: "Preprint",
+    title: "Expected Fewest Moves to Solve a Scrambled Cube",
+    authors: "V. H. Pham",
+    year: "2025",
+    summary:
+      "An information-theoretic floor for the WCA Fewest Moves Challenge: using the exact God's-number distance distribution, the expected optimal 3×3×3 solution is ≈17.70 HTM moves (>99.9% of states at distance 17–18), and for the n×n×n cube the expected optimal length is Θ(n²/log n).",
+    href: "assets/papers/cube_fmc.pdf",
+    cta: "PDF",
+  },
+  {
+    type: "Preprint",
+    title: "Why Fewest-Moves Methods Work: Subgroup Reduction as a Factorization of |G|",
+    authors: "V. H. Pham",
+    year: "2025",
+    summary:
+      "Proves why competitive cube solvers reduce through nested subgroups rather than searching all 4.3×10¹⁹ states: by Lagrange's theorem a method is a factorization of |G| into stage indices, and since Σ log[Gᵢ:Gᵢ₊₁] = log|G| is fixed, staging trades one intractable search for several tractable ones. Worked through Thistlethwaite's and Kociemba's chains.",
+    href: "assets/papers/cube_fmc_methods.pdf",
+    cta: "PDF",
+  },
+  {
+    type: "Preprint",
     title: "Quantum Lexicographically Minimal String Rotation and Benzenoid Identification via QRAM-Accelerated Search",
     authors: "M. Boady, V. H. Pham",
     year: "2025",
