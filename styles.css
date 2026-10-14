@@ -97,6 +97,11 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 0 clamp(1rem, 5vw, 2rem)
   filter: blur(40px); z-index: -1;
 }
 .hero__inner { max-width: 800px; padding: 2rem 0; }
+.hero__avatar {
+  width: 112px; height: 112px; border-radius: 50%; object-fit: cover;
+  border: 2px solid var(--border); margin-bottom: 1.4rem; display: block;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+}
 .hero__eyebrow { font-family: var(--mono); color: var(--accent); font-size: 0.9rem; margin-bottom: 1rem; letter-spacing: 0.01em; }
 .hero__title { font-size: clamp(2.3rem, 7.5vw, 4.2rem); font-weight: 800; line-height: 1.05; letter-spacing: -0.02em; margin-bottom: 1.3rem; }
 .hero__title span { color: var(--accent); }
@@ -107,6 +112,7 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 0 clamp(1rem, 5vw, 2rem)
 .hero__facts li { display: flex; flex-direction: column; }
 .hero__facts strong { font-size: 1.3rem; font-weight: 700; }
 .hero__facts span { font-family: var(--mono); font-size: 0.78rem; color: var(--text-dim); }
+.hero__facts .var { font-family: var(--serif); font-style: italic; }
 
 /* ---------- BUTTONS ---------- */
 .btn { display: inline-block; padding: 0.68rem 1.3rem; border-radius: 10px; font-weight: 600; font-size: 0.92rem; transition: transform 0.15s ease, border-color 0.15s ease, filter 0.15s ease; }

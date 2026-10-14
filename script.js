@@ -139,7 +139,7 @@ const EXPERIENCE = [
   {
     role: "Software Engineer — Payments Engineering",
     org: "Credit Genie",
-    loc: "Plymouth Meeting, PA (onsite)",
+    loc: "Plymouth Meeting, PA",
     date: "Sep 2026 – Present",
     points: [
       "Backend engineer on the Payments team of a membership-based personal-finance platform (interest-free cash advances, spending tools, and credit-building products).",
@@ -157,10 +157,11 @@ const EXPERIENCE = [
     points: [
       "ESP32-S3-CAM factory-automation firmware in C/ESP-IDF with ThingsBoard MQTT (telemetry, RPC, OTA) and multi-task FreeRTOS; double-buffered frame upload to an OCR backend for on-line visual inspection.",
       "Edge CV on ESP32-S3-CAM (ESP-DL) and Luckfox Pico Pro (RKNN): PyTorch digit CNN quantized INT8, on-device OCR ~10 FPS; YOLO11n on RV1106 NPU ~8–12 FPS; QR + face firmware with dual-core FreeRTOS ≥15 FPS.",
+      "Built <strong>VisionTestAI</strong>, an AI-assisted distance-vision / myopia pre-screening platform for clinics: a Frappe (Smart Hospital) desk for registration and MediaPipe face enrollment, an NVIDIA Jetson voice-guided Sloan-letter chart station, and MQTT/media/face-vector-DB services across a Tailscale network.",
       "Built a <strong>multi-agent business-analysis system</strong> (UAIP) on Google's Agent Development Kit — one graph + runner coordinating BA / Validation / Wiki / Designer capabilities behind a FastAPI chat API and Vite operator UI, containerized with Docker Compose.",
     ],
-    tags: ["ESP-IDF", "FreeRTOS", "PyTorch", "LLM Agents", "Google ADK", "FastAPI"],
-    repos: [{ label: "UAIP agent (private)", private: true }, { label: "Firmware (private)", private: true }],
+    tags: ["ESP-IDF", "FreeRTOS", "PyTorch", "Jetson", "LLM Agents", "Google ADK", "Frappe"],
+    repos: [{ label: "VisionTestAI (private)", private: true }, { label: "UAIP agent (private)", private: true }],
   },
   {
     role: "Embedded Software Engineer",
