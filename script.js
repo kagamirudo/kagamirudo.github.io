@@ -168,7 +168,9 @@ const PUBLICATIONS = [
     authors: "V. H. Pham",
     year: "2026",
     summary:
-      "Proposes and verifies the memory architecture quantum LMSR actually needs: a coherent QDMA engine that bursts a contiguous window from a base address held in superposition, (1/√N)Σ|k⟩ → (1/√N)Σ|k⟩|s_k…s_{k+L-1}⟩, with one shared address-decode, classical-offset taps, and modular wraparound. Qiskit-verified to fidelity 1.0 against the ideal entangled target; the address–data entanglement is pinned exactly to the number of distinguishable length-L windows.",
+      "Proposes and verifies the memory architecture quantum LMSR actually needs: a coherent QDMA engine that bursts a contiguous window from a base address held in superposition —" +
+      "<span class='pub__eq'>(1/√N) Σ<sub>k</sub> |k⟩ &nbsp;⟶&nbsp; (1/√N) Σ<sub>k</sub> |k⟩ |s<sub>k</sub> s<sub>k+1</sub> … s<sub>k+L−1</sub>⟩</span>" +
+      "with one shared address-decode, classical-offset taps, and modular wraparound. Qiskit-verified to fidelity 1.0 against the ideal entangled target; the address–data entanglement is pinned exactly to the number of distinguishable length-L windows.",
     href: "assets/papers/qdma_arch.pdf",
     cta: "PDF",
   },
@@ -318,7 +320,15 @@ function renderCollaborators() {
 function renderPublications() {
   const el = document.getElementById("pubsList");
   if (!el) return;
-  el.innerHTML = PUBLICATIONS.map((p) => {
+  // Group by type: all Preprints first, then Projects (stable within each group).
+  const typeOrder = { preprint: 0, project: 1 };
+  const ordered = PUBLICATIONS
+    .map((p, i) => ({ p, i }))
+    .sort((a, b) =>
+      (typeOrder[a.p.type.toLowerCase()] ?? 9) - (typeOrder[b.p.type.toLowerCase()] ?? 9) ||
+      a.i - b.i)
+    .map((x) => x.p);
+  el.innerHTML = ordered.map((p) => {
     const external = p.href.startsWith("http");
     return `
       <li class="pub reveal">
