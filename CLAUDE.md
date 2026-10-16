@@ -64,9 +64,8 @@ Drexel Material Lab → Medcrypt → FPT Software. Private repos are shown but m
 🔒 (no public links — they'd 404).
 
 ## OPEN ITEMS (ask Gary / finish later)
-1. **Prof. Kandasamy note** — his `COLLABORATORS` card still has a bracketed
-   placeholder `note` and renders dashed. Needs one line on what Gary worked on
-   with him.
+_(none open — Kandasamy note resolved 2026-10-16: PPG/heartbeat alignment for a
+handheld SpO₂ device.)_
 
 ## Gotchas already fixed (don't regress)
 - **Sticky nav**: both `html` and `body` must use `overflow-x: clip` (NOT

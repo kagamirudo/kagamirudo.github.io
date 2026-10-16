@@ -49,7 +49,7 @@ const RESEARCH = [
 ];
 
 // ---- Collaborators & advisors ----
-// Prof. Kandasamy's `note` still needs one line (card renders dashed until then).
+// (Resolved) Prof. Kandasamy's note: PPG/heartbeat alignment for a handheld SpO2 device.
 const COLLABORATORS = [
   {
     key: "ADVISOR_FPGA",
@@ -74,7 +74,7 @@ const COLLABORATORS = [
     name: "Prof. Nagarajan Kandasamy",
     role: "Faculty collaborator — Embedded & Reconfigurable Systems",
     org: "Drexel University, Dept. of Electrical & Computer Engineering",
-    note: "[Add one line on what you worked on with Prof. Kandasamy.]",
+    note: "Worked on temporally aligning PPG and heartbeat signals to support a handheld device for reading blood-oxygen saturation (SpO₂).",
     profile: "https://drexel.edu/engineering/about/faculty-staff/K/kandasamy-nagarajan/",
     placeholder: true,
   },
