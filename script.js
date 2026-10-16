@@ -163,6 +163,26 @@ const PUBLICATIONS = [
     cta: "Repo ↗",
   },
   {
+    type: "Preprint",
+    title: "A Coherent QDMA Architecture: Burst Reads from a Superposed Address for Quantum String Rotation",
+    authors: "V. H. Pham",
+    year: "2026",
+    summary:
+      "Proposes and verifies the memory architecture quantum LMSR actually needs: a coherent QDMA engine that bursts a contiguous window from a base address held in superposition, (1/√N)Σ|k⟩ → (1/√N)Σ|k⟩|s_k…s_{k+L-1}⟩, with one shared address-decode, classical-offset taps, and modular wraparound. Qiskit-verified to fidelity 1.0 against the ideal entangled target; the address–data entanglement is pinned exactly to the number of distinguishable length-L windows.",
+    href: "assets/papers/qdma_arch.pdf",
+    cta: "PDF",
+  },
+  {
+    type: "Project",
+    title: "Coherent QDMA — Qiskit architecture & verification code",
+    authors: "V. H. Pham · Drexel",
+    year: "2026",
+    summary:
+      "The coherent QDMA engine, superposed-base verification, and entanglement-entropy measurement behind the architecture paper. All results regenerate from a fixed seed.",
+    href: "https://github.com/kagamirudo/qdma-arch",
+    cta: "Repo ↗",
+  },
+  {
     type: "Project",
     title: "Quantum LMSR — Qiskit implementation & senior-project code",
     authors: "V. H. Pham · Drexel CCI",
