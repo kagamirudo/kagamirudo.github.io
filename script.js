@@ -143,6 +143,26 @@ const PUBLICATIONS = [
     cta: "PDF",
   },
   {
+    type: "Preprint",
+    title: "Costing the QRAM: A DMA-Style Burst Read Oracle for Quantum LMSR",
+    authors: "V. H. Pham",
+    year: "2026",
+    summary:
+      "Opens the idealized-QRAM assumption behind the LMSR speedup: costed at the fault-tolerant circuit level the read oracle is Θ(N) T-count per random access, so the √N query advantage is not a √N gate advantage. Introduces QDMA, a descriptor-driven burst read exploiting the contiguity of string rotations to amortize address decode to O(1) per character — an N× reduction in the cost oracle (341× at N=1024), verified bit-exact in Qiskit.",
+    href: "assets/papers/qram_qdma.pdf",
+    cta: "PDF",
+  },
+  {
+    type: "Project",
+    title: "QRAM/QDMA for LMSR — Qiskit resource-estimation code",
+    authors: "V. H. Pham · Drexel",
+    year: "2026",
+    summary:
+      "QROM/QDMA read-oracle circuits, structured-construction T-count models, the resource sweep, and the statevector correctness checks behind the QRAM-costing paper. All results regenerate from a fixed seed.",
+    href: "https://github.com/kagamirudo/qram-lmsr",
+    cta: "Repo ↗",
+  },
+  {
     type: "Project",
     title: "Quantum LMSR — Qiskit implementation & senior-project code",
     authors: "V. H. Pham · Drexel CCI",
